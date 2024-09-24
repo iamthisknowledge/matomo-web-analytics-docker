@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  matomo:
+    image: matomo:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./matomo:/var/www/html
+    environment:
+      - MATOMO_DATABASE_HOST=mariadb
+      - MATOMO_DATABASE_ADAPTER=mysqli
+      - MATOMO_DATABASE_TABLES_PREFIX=matomo_
+      - MATOMO_DATABASE_DBNAME=matomo
+      - MATOMO_DATABASE_USERNAME=matomo
+      - MATOMO_DATABASE_PASSWORD=matomo_secret
+      - MATOMO_SUPERUSER_NAME=${MATOMO_SUPERUSER_NAME}
+      - MATOMO_SUPERUSER_PASSWORD=${MATOMO_SUPERUSER_PASSWORD}
+      - MATOMO_SUPERUSER_EMAIL=${MATOMO_SUPERUSER_EMAIL}
+
+  mariadb:
+    image: mariadb:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_secret
+      - MYSQL_DATABASE=matomo
+      - MYSQL_USER=matomo
+      - MYSQL_PASSWORD=matomo_secret
+    volumes:
+      - ./mariadb:/var/lib/mysql
