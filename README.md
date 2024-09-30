@@ -23,9 +23,20 @@ Follow the steps below to set up and run Matomo on your local machine using Dock
 
 Folgen Sie den untenstehenden Schritten, um Matomo auf Ihrem lokalen Rechner mit Docker einzurichten und auszuführen:
 
+---
+
 ### 1️⃣ Clone the Repository | Klonen Sie das Repository
 
+#### English:
+
 Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/matomo-docker-setup.git
+cd matomo-docker-setup
+```
+
+#### Deutsch:
 
 Klonen Sie dieses Repository auf Ihren lokalen Rechner:
 
@@ -34,9 +45,19 @@ git clone https://github.com/yourusername/matomo-docker-setup.git
 cd matomo-docker-setup
 ```
 
+---
+
 ### 2️⃣ Start Matomo | Starten Sie Matomo
 
+#### English:
+
 Use Docker Compose to start the Matomo and MariaDB containers:
+
+```bash
+docker-compose up -d
+```
+
+#### Deutsch:
 
 Verwenden Sie Docker Compose, um die Matomo- und MariaDB-Container zu starten:
 
@@ -44,9 +65,19 @@ Verwenden Sie Docker Compose, um die Matomo- und MariaDB-Container zu starten:
 docker-compose up -d
 ```
 
+---
+
 ### 3️⃣ Access Matomo | Zugriff auf Matomo
 
+#### English:
+
 Open your web browser and go to:
+
+```bash
+http://localhost:8080
+```
+
+#### Deutsch:
 
 Öffnen Sie Ihren Webbrowser und gehen Sie zu:
 
@@ -54,7 +85,40 @@ Open your web browser and go to:
 http://localhost:8080
 ```
 
-### 4️⃣ Follow the on-screen instructions to complete the setup | Folgen Sie den Anweisungen auf dem Bildschirm, um die Einrichtung abzuschließen:
+---
+
+### 1️⃣ Welcome | Willkommen
+
+#### English:
+![Step 1 Welcome - English](./installation-guide-assets/step-1-welcome-en.png)
+
+**Explanation**: The blue square highlights the **"NEXT"** button. This is where you begin the Matomo installation process by confirming the welcome message and moving on to the next step. Click on the "NEXT" button to proceed with the installation.
+
+#### Deutsch:
+![Schritt 1 Willkommen - Deutsch](./installation-guide-assets/step-1-willkommen-de.png)
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor. Hier starten Sie den Installationsprozess von Matomo, indem Sie die Willkommensnachricht bestätigen und mit dem nächsten Schritt fortfahren. Klicken Sie auf "NÄCHSTE", um fortzufahren.
+
+---
+
+### 2️⃣ System Check | Systemprüfung
+
+#### English:
+![Step 2 System Check - English](./installation-guide-assets/step-2-system-check-en.png)
+
+**Explanation**: The blue square highlights the **"NEXT"** button, indicating that the system check was successful. It checks your server environment and configuration for compatibility with Matomo. Once the system check passes, click "NEXT" to proceed.
+
+#### Deutsch:
+![Schritt 2 Systemprüfung - Deutsch](./installation-guide-assets/step-2-systempruefung-de.png)
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor und zeigt an, dass die Systemprüfung erfolgreich war. Es wird geprüft, ob Ihre Serverumgebung und Konfiguration mit Matomo kompatibel sind. Wenn die Systemprüfung bestanden ist, klicken Sie auf "NÄCHSTE", um fortzufahren.
+
+---
+
+### 3️⃣ Database Setup | Datenbank einrichten
+
+#### English:
+![Step 3 Database Setup - English](./installation-guide-assets/step-3-database-setup-en.png)
 
 - **Database Server:** `mariadb`
 - **Database Name:** `matomo`
@@ -63,7 +127,78 @@ http://localhost:8080
 
 Create a superuser account with your preferred credentials to access the Matomo dashboard.
 
+**Explanation**: The blue square highlights the **"NEXT"** button after you've entered the required database credentials (e.g., Database Server, Login, Password, and Database Name). Click "NEXT" once you've filled in the correct database details to continue.
+
+#### Deutsch:
+![Schritt 3 Datenbank einrichten - Deutsch](./installation-guide-assets/step-3-datenbank-einrichten-de.png)
+
+- **Datenbank-Server:** `mariadb`
+- **Datenbank-Name:** `matomo`
+- **Benutzer:** `matomo`
+- **Passwort:** `matomo_secret`
+
 Erstellen Sie ein Superuser-Konto mit Ihren bevorzugten Zugangsdaten, um auf das Matomo-Dashboard zuzugreifen.
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor, nachdem Sie die erforderlichen Datenbankanmeldeinformationen (z. B. Datenbankserver, Login, Passwort und Datenbankname) eingegeben haben. Klicken Sie auf "NÄCHSTE", nachdem Sie die richtigen Datenbankdetails eingegeben haben, um fortzufahren.
+
+---
+
+### 4️⃣ Creating the Tables | Erstelle die Tabellen
+
+#### English:
+![Step 4 Creating the Tables - English](./installation-guide-assets/step-4-creating-the-tables-en.png)
+
+**Explanation**: The blue square highlights the **"NEXT"** button. Once Matomo has successfully created the necessary database tables, you can click "NEXT" to continue to the next configuration step.
+
+#### Deutsch:
+![Schritt 4 Erstelle die Tabellen - Deutsch](./installation-guide-assets/step-4-erstelle-die-tabellen-de.png)
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor. Sobald Matomo erfolgreich die erforderlichen Datenbanktabellen erstellt hat, können Sie auf "NÄCHSTE" klicken, um mit dem nächsten Konfigurationsschritt fortzufahren.
+
+---
+
+### 5️⃣ Superuser Setup | Haupadministrator Einrichten
+
+#### English:
+![Step 5 Superuser Setup - English](./installation-guide-assets/step-5-superuser-en.png)
+
+**Explanation**: The blue square highlights the **"NEXT"** button after you've entered the credentials for the Superuser (admin account). This account is the main administrator for Matomo. Once your credentials are set, click "NEXT" to continue.
+
+#### Deutsch:
+![Schritt 5 Hauptadministrator - Deutsch](./installation-guide-assets/step-5-hauptadministrator-de.png)
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor, nachdem Sie die Anmeldedaten für den Hauptadministrator (Superuser-Konto) eingegeben haben. Dieses Konto ist der Hauptadministrator für Matomo. Sobald Ihre Anmeldedaten festgelegt sind, klicken Sie auf "NÄCHSTE", um fortzufahren.
+
+---
+
+### 6️⃣ Set up a Website | Webseite hinzufügen
+
+#### English:
+![Step 6 Set up a Website - English](./installation-guide-assets/step-6-set-up-a-website-en.png)
+
+**Explanation**: The blue square highlights the **"NEXT"** button after you've entered the details of the website you want to track (Website Name, URL, Timezone, etc.). Click "NEXT" once you're done.
+
+#### Deutsch:
+![Schritt 6 Webseite hinzufügen - Deutsch](./installation-guide-assets/step-6-webseite-hinzufuegen-de.png)
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor, nachdem Sie die Details der Website, die Sie verfolgen möchten (Webseitenname, URL, Zeitzone usw.), eingegeben haben. Klicken Sie auf "NÄCHSTE", sobald Sie fertig sind.
+
+---
+
+### 7️⃣ JavaScript Tracking Code | JavaScript-Tracking-Code
+
+#### English:
+![Step 7 JavaScript Tracking Code - English](./installation-guide-assets/step-7-javascript-tracking-code-de.png)
+
+**Explanation**: The blue square highlights the **"NEXT"** button after viewing the JavaScript tracking code. This code needs to be added to your website’s HTML to enable tracking. After copying the code or saving it for later, click "NEXT."
+
+#### Deutsch:
+![Schritt 7 JavaScript-Tracking-Code - Deutsch](./installation-guide-assets/step-7-javascript-tracking-code.png)
+
+**Erklärung**: Das blaue Quadrat hebt die **"NÄCHSTE"** Schaltfläche hervor, nachdem Sie den JavaScript-Tracking-Code angezeigt haben. Dieser Code muss dem HTML Ihrer Website hinzugefügt werden, um das Tracking zu ermöglichen. Nachdem Sie den Code kopiert oder für später gespeichert haben, klicken Sie auf "NÄCHSTE."
+
+---
+---
 
 ## ⚙️ Docker Configuration | Docker-Konfiguration
 
@@ -85,9 +220,9 @@ services:
       - MATOMO_DATABASE_HOST=mariadb
       - MATOMO_DATABASE_ADAPTER=mysqli
       - MATOMO_DATABASE_TABLES_PREFIX=matomo_
-      - MATOMO_DATABASE_DBNAME=${MYSQL_DATABASE}
-      - MATOMO_DATABASE_USERNAME=${MYSQL_USER}
-      - MATOMO_DATABASE_PASSWORD=${MYSQL_PASSWORD}
+      - MATOMO_DATABASE_DBNAME=matomo
+      - MATOMO_DATABASE_USERNAME=matomo
+      - MATOMO_DATABASE_PASSWORD=matomo_secret
       - MATOMO_SUPERUSER_NAME=${MATOMO_SUPERUSER_NAME}
       - MATOMO_SUPERUSER_PASSWORD=${MATOMO_SUPERUSER_PASSWORD}
       - MATOMO_SUPERUSER_EMAIL=${MATOMO_SUPERUSER_EMAIL}
@@ -95,10 +230,10 @@ services:
   mariadb:
     image: mariadb:latest
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=root_secret
+      - MYSQL_DATABASE=matomo
+      - MYSQL_USER=matomo
+      - MYSQL_PASSWORD=matomo_secret
     volumes:
       - ./mariadb:/var/lib/mysql
 ```
